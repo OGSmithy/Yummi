@@ -14,6 +14,8 @@
 		F715AFDF2B5FECBB0099C55C /* YummiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFDE2B5FECBB0099C55C /* YummiTests.swift */; };
 		F715AFE92B5FECBB0099C55C /* YummiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFE82B5FECBB0099C55C /* YummiUITests.swift */; };
 		F715AFEB2B5FECBB0099C55C /* YummiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFEA2B5FECBB0099C55C /* YummiUITestsLaunchTests.swift */; };
+		F715AFF82B5FEFCE0099C55C /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFF72B5FEFCE0099C55C /* Ingredients.swift */; };
+		F715AFFA2B5FF33D0099C55C /* StarterIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFF92B5FF33D0099C55C /* StarterIngredients.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		F715AFE42B5FECBB0099C55C /* YummiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YummiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F715AFE82B5FECBB0099C55C /* YummiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITests.swift; sourceTree = "<group>"; };
 		F715AFEA2B5FECBB0099C55C /* YummiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F715AFF72B5FEFCE0099C55C /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
+		F715AFF92B5FF33D0099C55C /* StarterIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterIngredients.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				F715AFCF2B5FECB80099C55C /* ContentView.swift */,
 				F715AFD12B5FECBA0099C55C /* Assets.xcassets */,
 				F715AFD32B5FECBA0099C55C /* Preview Content */,
+				F715AFF72B5FEFCE0099C55C /* Ingredients.swift */,
+				F715AFF92B5FF33D0099C55C /* StarterIngredients.swift */,
 			);
 			path = Yummi;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F715AFFA2B5FF33D0099C55C /* StarterIngredients.swift in Sources */,
 				F715AFD02B5FECB80099C55C /* ContentView.swift in Sources */,
+				F715AFF82B5FEFCE0099C55C /* Ingredients.swift in Sources */,
 				F715AFCE2B5FECB80099C55C /* YummiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

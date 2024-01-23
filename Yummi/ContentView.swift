@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    let starterIngredients = StarterIngredients()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello")
-        }
-        .padding()
+        Text(Ingredients.displayIngredients())
+            
     }
 }
 
