@@ -8,5 +8,6 @@
 import Foundation
 
 struct StarterIngredients {
-    let ingredients = Ingredient(name: "Banana", quantity: 3.0, category: "Fruit", expiryDate: "Dec 25th")
+    let ingredients = [Ingredient(name: "Banana", quantity: 3.0, category: "Fruit", expiryDate: Date.distantPast, unit: "kg"),
+                       Ingredient(name: "Milk", quantity: 2.9, category: "Liquid", expiryDate: Date.distantFuture, unit: "L")]
 }

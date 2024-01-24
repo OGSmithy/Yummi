@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    let starterIngredients = StarterIngredients()
+    @State var starterIngredients = StarterIngredients()
+    @State var selectedIngredient: Int = 0
     
     var body: some View {
-        Text(Ingredients.displayIngredients())
+        VStack {
+            Text("\(starterIngredients.ingredients[selectedIngredient].displayIngredients())")
+            Button("Switch Ingredient", action: {
+                selectedIngredient += 1
+            })
             
+        }
+       
     }
 }
 

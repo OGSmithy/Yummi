@@ -11,13 +11,14 @@ struct Ingredient {
     let name: String
     var quantity: Double
     let category: String
-    var expiryDate: String
+    var expiryDate: Date
+    let unit: String
     
     
     func displayIngredients() -> String {
         return """
         Name: \(name)
-        Quantity: \(quantity) units
+        Quantity: \(quantity) \(unit)
         Category: \(category)
         Expiry Date: \(expiryDate)
         """
