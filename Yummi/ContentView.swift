@@ -16,12 +16,20 @@ struct ContentView: View {
             }
         }
     }
-    @State var newName: String = ""
-    @State var newQuantity: String = ""
-    @State var newCategory: String = ""
+    @State var newName: String = String()
+    @State var newQuantity: String = String()
+    @State var newCategory: String = String()
     @State var newExpiryDate: String = ""
-    @State var newUnit: String = ""
-
+    @State var newUnit: String = String()
+    enum Category: String, CaseIterable, Identifiable {
+        case fruit, liquid, carbohydrates
+        var id: Self { self }
+    }
+    
+    
+    @State private var myIngredients = [Ingredient]()
+    @State private var newIngredient = []
+    
     var body: some View {
         Form {
             VStack {
@@ -38,25 +46,34 @@ struct ContentView: View {
                     text: $newName
                 )
                 
+                
                 TextField(
                     "Quantity: ",
                     text: $newQuantity
                 )
+                newIngredient.append(newQuantity)
                 
-                TextField(
-                    "Category: ",
-                    text: $newCategory
-                )
+                Picker("Category", selection: $newCategory) {
+                    Text("Fruit").tag(Category.fruit)
+                    Text("Liquid").tag(Category.liquid)
+                    Text("Carbs").tag(Category.carbohydrates)
+                }
                 
                 TextField(
                     "Expiry Date: ",
                     text: $newExpiryDate
                 )
+                newIngredient.append(newExpiryDate)
                 
                 TextField(
                     "Unit: ",
                     text: $newUnit
                 )
+                newIngredient.append(newUnit)
+                
+                Button("Create new ingredient", action: {
+                    myIngredients.append(newIngredient)
+                })
             }
             
         }
