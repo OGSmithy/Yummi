@@ -23,4 +23,15 @@ struct Ingredient {
         Expiry Date: \(expiryDate)
         """
     }
+    
+    #if DEBUG
+
+    static var examples = [
+        Recipies(name: "Mac n' Cheese", ingredients: [Ingredient], isFavorite: true, rating: 10)
+    ]
+
+
+
+    #endif
+
 }

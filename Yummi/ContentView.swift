@@ -27,12 +27,22 @@ struct ContentView: View {
     @State private var newUnit: Unit = .kg
    
     enum Category: String, CaseIterable {
-        case fruit, liquid, carbohydrates
+        case fruit, liquid, carbohydrates, meat
     }
     enum Unit: String, CaseIterable {
         case kg, g, ml, L
     }
-
+    
+    struct Recipies {
+        let name: String
+        let ingredients: [Ingredient]
+        let isFavorite: Bool
+        let rating: Int
+    }
+    
+  
+    
+  
     
     var body: some View {
         Form {
