@@ -16,6 +16,7 @@
 		F715AFEB2B5FECBB0099C55C /* YummiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFEA2B5FECBB0099C55C /* YummiUITestsLaunchTests.swift */; };
 		F715AFF82B5FEFCE0099C55C /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFF72B5FEFCE0099C55C /* Ingredients.swift */; };
 		F715AFFA2B5FF33D0099C55C /* StarterIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFF92B5FF33D0099C55C /* StarterIngredients.swift */; };
+		F784AAAB2B73ED23002C2FB4 /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784AAAA2B73ED23002C2FB4 /* RecipesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		F715AFEA2B5FECBB0099C55C /* YummiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F715AFF72B5FEFCE0099C55C /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
 		F715AFF92B5FF33D0099C55C /* StarterIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterIngredients.swift; sourceTree = "<group>"; };
+		F784AAAA2B73ED23002C2FB4 /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				F715AFCD2B5FECB80099C55C /* YummiApp.swift */,
 				F715AFCF2B5FECB80099C55C /* ContentView.swift */,
+				F784AAAA2B73ED23002C2FB4 /* RecipesView.swift */,
 				F715AFD12B5FECBA0099C55C /* Assets.xcassets */,
 				F715AFD32B5FECBA0099C55C /* Preview Content */,
 				F715AFF72B5FEFCE0099C55C /* Ingredients.swift */,
@@ -265,6 +268,7 @@
 			files = (
 				F715AFFA2B5FF33D0099C55C /* StarterIngredients.swift in Sources */,
 				F715AFD02B5FECB80099C55C /* ContentView.swift in Sources */,
+				F784AAAB2B73ED23002C2FB4 /* RecipesView.swift in Sources */,
 				F715AFF82B5FEFCE0099C55C /* Ingredients.swift in Sources */,
 				F715AFCE2B5FECB80099C55C /* YummiApp.swift in Sources */,
 			);

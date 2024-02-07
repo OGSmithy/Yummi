@@ -27,11 +27,28 @@ struct Ingredient {
     #if DEBUG
 
     static var examples = [
-        Recipies(name: "Mac n' Cheese", ingredients: [Ingredient], isFavorite: true, rating: 10)
+        Recipes(name: "Mac n' Cheese", ingredients: [Ingredient](), isFavorite: true, rating: 10),
+        Recipes(name: "Milkshake", ingredients: [Ingredient](), isFavorite: false, rating: 2)
     ]
 
 
 
     #endif
 
+}
+
+struct Recipes {
+    let name: String
+    let ingredients: [Ingredient]
+    let isFavorite: Bool
+    let rating: Int
+    
+    func displayRecipe() -> String {
+        return """
+        Recipe: \(name)
+        Ingredients Needed: \(ingredients)
+        Favorite Meal: \(isFavorite)
+        Rating (/10): \(rating)
+        """
+    }
 }

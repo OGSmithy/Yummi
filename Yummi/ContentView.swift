@@ -33,12 +33,7 @@ struct ContentView: View {
         case kg, g, ml, L
     }
     
-    struct Recipies {
-        let name: String
-        let ingredients: [Ingredient]
-        let isFavorite: Bool
-        let rating: Int
-    }
+    
     
   
     
