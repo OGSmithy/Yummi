@@ -12,11 +12,11 @@
 		F715AFD22B5FECBA0099C55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F715AFD12B5FECBA0099C55C /* Assets.xcassets */; };
 		F715AFD52B5FECBA0099C55C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F715AFD42B5FECBA0099C55C /* Preview Assets.xcassets */; };
 		F715AFDF2B5FECBB0099C55C /* YummiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFDE2B5FECBB0099C55C /* YummiTests.swift */; };
-		F715AFE92B5FECBB0099C55C /* YummiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFE82B5FECBB0099C55C /* YummiUITests.swift */; };
 		F715AFEB2B5FECBB0099C55C /* YummiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFEA2B5FECBB0099C55C /* YummiUITestsLaunchTests.swift */; };
 		F715AFF82B5FEFCE0099C55C /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFF72B5FEFCE0099C55C /* Ingredients.swift */; };
 		F715AFFA2B5FF33D0099C55C /* StarterIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFF92B5FF33D0099C55C /* StarterIngredients.swift */; };
 		F784AAAB2B73ED23002C2FB4 /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784AAAA2B73ED23002C2FB4 /* RecipesView.swift */; };
+		F7A030632B88B0CA0083C4AA /* YummiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFE82B5FECBB0099C55C /* YummiUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				F715AFDE2B5FECBB0099C55C /* YummiTests.swift */,
+				F715AFE82B5FECBB0099C55C /* YummiUITests.swift */,
 			);
 			path = YummiTests;
 			sourceTree = "<group>";
@@ -130,7 +131,6 @@
 		F715AFE72B5FECBB0099C55C /* YummiUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F715AFE82B5FECBB0099C55C /* YummiUITests.swift */,
 				F715AFEA2B5FECBB0099C55C /* YummiUITestsLaunchTests.swift */,
 			);
 			path = YummiUITests;
@@ -279,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F715AFDF2B5FECBB0099C55C /* YummiTests.swift in Sources */,
+				F7A030632B88B0CA0083C4AA /* YummiUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F715AFEB2B5FECBB0099C55C /* YummiUITestsLaunchTests.swift in Sources */,
-				F715AFE92B5FECBB0099C55C /* YummiUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

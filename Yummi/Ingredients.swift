@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ingredient {
+struct Ingredient: Hashable {
     let name: String
     var quantity: Double
     let category: String
@@ -23,25 +23,23 @@ struct Ingredient {
         Expiry Date: \(expiryDate)
         """
     }
-    
-    #if DEBUG
-
-    static var examples = [
-        Recipes(name: "Mac n' Cheese", ingredients: [Ingredient](), isFavorite: true, rating: 10),
-        Recipes(name: "Milkshake", ingredients: [Ingredient](), isFavorite: false, rating: 2)
-    ]
-
-
-
-    #endif
 
 }
 
-struct Recipes {
+struct Recipes: Hashable {
     let name: String
     let ingredients: [Ingredient]
     let isFavorite: Bool
     let rating: Int
+  
+    #if DEBUG
+
+    static var examples = [
+        Recipes(name: "Mac n' Cheese", ingredients: [Ingredient](), isFavorite: true, rating: 10),
+        Recipes(name: "Milkshake", ingredients: [Ingredient](), isFavorite: false, rating: 2),
+        Recipes(name: "Fajitas", ingredients: [Ingredient](), isFavorite: false, rating: 8)]
+
+    #endif
     
     func displayRecipe() -> String {
         return """

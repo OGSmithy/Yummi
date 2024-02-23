@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var ingredients = [Ingredient(name: "Banana", quantity: 3.0, category: "Fruit", expiryDate: Date.distantPast, unit: "kg"),
-                              Ingredient(name: "Milk", quantity: 2.9, category: "Liquid", expiryDate: Date.now, unit: "L")]
+    @State var ingredients = [
+        Ingredient(name: "Banana", quantity: 3.0, category: "Fruit", expiryDate: Date.distantPast, unit: "kg"),
+        Ingredient(name: "Milk", quantity: 2.9, category: "Dairy", expiryDate: Date.now, unit: "L"),
+        Ingredient(name: "Chicken", quantity: 1.5, category: "Meat", expiryDate: Date.now, unit: "kg"),
+        Ingredient(name: "Cheese", quantity: 500, category: "Dairy", expiryDate: Date.now, unit: "g"),
+        Ingredient(name: "Chocolate", quantity: 300, category: "Sweet", expiryDate: Date.now, unit: "g")]
+        
     
     @State var selectedIngredient: Int = 0 {
         didSet {
@@ -27,7 +32,7 @@ struct ContentView: View {
     @State private var newUnit: Unit = .kg
    
     enum Category: String, CaseIterable {
-        case fruit, liquid, carbohydrates, meat
+        case fruit, carbohydrates, meat, dairy, sweet
     }
     enum Unit: String, CaseIterable {
         case kg, g, ml, L

@@ -9,29 +9,32 @@ import SwiftUI
 
 struct RecipesView: View {
     
-    //@State var pickedRecipe =
+    @State var examplesHere: [Recipes]
+    @State var pickedRecipe: Recipes = Recipes.examples[0]
     
-    enum theRecipes: String, CaseIterable {
-        for i in 0..< examples.count {
-        case i(name)
-        }
-    }
     
     var body: some View {
         Form {
             Section {
-                Text("Which recipe would you like to view?")
-                    .bold()
-                Picker("Which recipe would you like to view?",selection: $pickedRecipe) {
-                    ForEach(examples[0], id:\.self) { newRecipe in
-                        
+                VStack {
+                    Text("Pick Your Recipe!")
+                        .bold()
+                    Picker("Which recipe would you like to view?", selection: $pickedRecipe) {
+                        ForEach(examplesHere, id:\.self) { newRecipe in
+                            Text(newRecipe.name).tag(newRecipe)
+
+                        }
                     }
+                    Text("\(pickedRecipe.displayRecipe())")
                 }
             }
         }
     }
 }
 
-#Preview {
-    RecipesView()
+
+struct RecipesView_Previews: PreviewProvider {
+    static var previews: some View {
+        RecipesView(examplesHere: Recipes.examples)
+    }
 }
