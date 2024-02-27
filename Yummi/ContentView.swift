@@ -45,57 +45,64 @@ struct ContentView: View {
   
     
     var body: some View {
-        Form {
-            
-            Section {
-                if ingredients.count > 0 {
-                    Text("\(ingredients[selectedIngredient].displayIngredients())")
-                    Button("Switch Ingredient", action: {
-                        selectedIngredient += 1
-                    })
-                    .padding()
-                }
-                else {
-                    Text("No ingredients. Add one")
-                }
-            }
-            
-            Section {
-                Text("Input a new ingredient: ")
-    
-                TextField(
-                    "Name: ",
-                    text: $newName
-                )
-                
-                TextField(
-                    "Quantity: ",
-                    text: $newQuantity
-                )
-    
-    
-                Picker("Category", selection: $newCategory) {
-                    ForEach(Category.allCases, id:\.self) { newCategory in
-                        Text(newCategory.rawValue.capitalized)
+        NavigationStack {
+            Form {
+     
+                Section {
+                    if ingredients.count > 0 {
+                        Text("\(ingredients[selectedIngredient].displayIngredients())")
+                        Button("Switch Ingredient", action: {
+                            selectedIngredient += 1
+                        })
+                        .padding()
+                    }
+                    else {
+                        Text("No ingredients. Add one")
                     }
                 }
                 
-                
-                DatePicker("Expiry Date", selection: $newExpiryDate, displayedComponents: [.date])
-    
-                Picker("Unit", selection: $newUnit) {
-                    ForEach(Unit.allCases, id:\.self) { newUnit in
-                        Text(newUnit.rawValue)
+                Section {
+                    Text("Input a new ingredient: ")
+                    
+                    TextField(
+                        "Name: ",
+                        text: $newName
+                    )
+                    
+                    TextField(
+                        "Quantity: ",
+                        text: $newQuantity
+                    )
+                    
+                    
+                    Picker("Category", selection: $newCategory) {
+                        ForEach(Category.allCases, id:\.self) { newCategory in
+                            Text(newCategory.rawValue.capitalized)
+                        }
+                    }
+                    
+                    
+                    DatePicker("Expiry Date", selection: $newExpiryDate, displayedComponents: [.date])
+                    
+                    Picker("Unit", selection: $newUnit) {
+                        ForEach(Unit.allCases, id:\.self) { newUnit in
+                            Text(newUnit.rawValue)
+                        }
+                    }
+                    
+                    Button {
+                        ingredients.append(Ingredient(name: newName, quantity: Double(newQuantity) ?? 0.0, category: newCategory.rawValue, expiryDate: newExpiryDate, unit: newUnit.rawValue))
+                    } label: {
+                        Text("Create ingredient")
                     }
                 }
-    
-                Button {
-                    ingredients.append(Ingredient(name: newName, quantity: Double(newQuantity) ?? 0.0, category: newCategory.rawValue, expiryDate: newExpiryDate, unit: newUnit.rawValue))
+                NavigationLink {
+                    RecipesView(recipes: [Recipes]())
                 } label: {
-                    Text("Create ingredient")
+                    Text("See Recipes")
                 }
+                
             }
-            
         }
         
     }

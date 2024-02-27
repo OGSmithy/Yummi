@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecipesView: View {
     
-    @State var examplesHere: [Recipes]
+    @State var recipes: [Recipes]
     @State var pickedRecipe: Recipes = Recipes.examples[0]
     
     
@@ -20,7 +20,7 @@ struct RecipesView: View {
                     Text("Pick Your Recipe!")
                         .bold()
                     Picker("Which recipe would you like to view?", selection: $pickedRecipe) {
-                        ForEach(examplesHere, id:\.self) { newRecipe in
+                        ForEach(recipes, id:\.self) { newRecipe in
                             Text(newRecipe.name).tag(newRecipe)
 
                         }
@@ -35,6 +35,6 @@ struct RecipesView: View {
 
 struct RecipesView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipesView(examplesHere: Recipes.examples)
+        RecipesView(recipes: Recipes.examples)
     }
 }

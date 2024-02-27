@@ -35,7 +35,7 @@ struct Recipes: Hashable {
     #if DEBUG
 
     static var examples = [
-        Recipes(name: "Mac n' Cheese", ingredients: [Ingredient](), isFavorite: true, rating: 10),
+        Recipes(name: "Mac n' Cheese", ingredients: [Ingredient(name: "Cheese", quantity: 500, category: "Dairy", expiryDate: Date.now, unit: "g"), Ingredient(name: "Milk", quantity: 2.9, category: "Dairy", expiryDate: Date.now, unit: "L")], isFavorite: true, rating: 10),
         Recipes(name: "Milkshake", ingredients: [Ingredient](), isFavorite: false, rating: 2),
         Recipes(name: "Fajitas", ingredients: [Ingredient](), isFavorite: false, rating: 8)]
 
