@@ -36,15 +36,19 @@ struct Recipes: Hashable {
 
     static var examples = [
         Recipes(name: "Mac n' Cheese", ingredients: [Ingredient(name: "Cheese", quantity: 500, category: "Dairy", expiryDate: Date.now, unit: "g"), Ingredient(name: "Milk", quantity: 2.9, category: "Dairy", expiryDate: Date.now, unit: "L")], isFavorite: true, rating: 10),
-        Recipes(name: "Milkshake", ingredients: [Ingredient](), isFavorite: false, rating: 2),
-        Recipes(name: "Fajitas", ingredients: [Ingredient](), isFavorite: false, rating: 8)]
+        Recipes(name: "Milkshake", ingredients: [Ingredient(name: "Milk", quantity: 2.9, category: "Dairy", expiryDate: Date.now, unit: "L"), Ingredient(name: "Banana", quantity: 3.0, category: "Fruit", expiryDate: Date.distantPast, unit: "kg"), Ingredient(name: "Chocolate", quantity: 300, category: "Sweet", expiryDate: Date.now, unit: "g")], isFavorite: false, rating: 2),
+        Recipes(name: "Fajitas", ingredients: [Ingredient(name: "Chicken", quantity: 1.5, category: "Meat", expiryDate: Date.now, unit: "kg"), Ingredient(name: "Cheese", quantity: 500, category: "Dairy", expiryDate: Date.now, unit: "g")], isFavorite: false, rating: 8)]
 
     #endif
     
     func displayRecipe() -> String {
+        var allIngredients = ""
+        for i in ingredients {
+            allIngredients += i[0]
+        }
         return """
         Recipe: \(name)
-        Ingredients Needed: \(ingredients)
+        Ingredients Needed: \(allIngredients)
         Favorite Meal: \(isFavorite)
         Rating (/10): \(rating)
         """
