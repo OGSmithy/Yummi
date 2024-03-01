@@ -44,7 +44,7 @@ struct Recipes: Hashable {
     func displayRecipe() -> String {
         var allIngredients = ""
         for i in ingredients {
-            allIngredients += i[0]
+            allIngredients += " \(i.name)"
         }
         return """
         Recipe: \(name)
