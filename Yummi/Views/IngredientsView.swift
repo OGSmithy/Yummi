@@ -10,7 +10,7 @@ import SwiftUI
 struct IngredientsView: View {
     
     @State var ingredients = [
-        Ingredient(name: "Banana", quantity: 3.0, category: "Fruit", expiryDate: Date(timeIntervalSince1970: 1000000000), unit: "kg"),
+        Ingredient(name: "Banana", quantity: 3.0, category: "Fruit", expiryDate: Date(timeIntervalSince1970: 1000199999), unit: "kg"),
         Ingredient(name: "Milk", quantity: 2.9, category: "Dairy", expiryDate: Date.now, unit: "L"),
         Ingredient(name: "Chicken", quantity: 1.5, category: "Meat", expiryDate: Date(timeIntervalSinceNow: 100000), unit: "kg"),
         Ingredient(name: "Cheese", quantity: 500, category: "Dairy", expiryDate: Date(timeIntervalSinceNow: 10000), unit: "g"),
@@ -41,16 +41,29 @@ struct IngredientsView: View {
     
     var body: some View {
         Form {
-            if ingredients.count > 0 {
-                Text("\(ingredients[selectedIngredient].displayIngredients())")
-                Button("Switch Ingredient", action: {
-                    selectedIngredient += 1
-                })
-                .padding()
+            List {
+                Text("These are your ingredients: ")
+                    .bold()
+                    .font(.custom("American Typewriter", fixedSize: 22))
+                    .foregroundColor(.red)
+                
+                ForEach(ingredients, id:\.self) { ingredient in
+                    Text("\(ingredient.displayIngredients())")
+                }
             }
-            else {
-                Text("No ingredients. Add one")
-            }
+            
+            
+//            if ingredients.count > 0 {
+//                Text("\(ingredients[selectedIngredient].displayIngredients())")
+//                Button("Switch Ingredient", action: {
+//                    selectedIngredient += 1
+//                })
+//                .padding()
+//            }
+//            else {
+//                Text("No ingredients. Add one")
+//            }
+            
             
             Section {
                 Text("Input a new ingredient: ")

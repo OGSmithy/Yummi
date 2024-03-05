@@ -102,8 +102,8 @@
 		F715AFCC2B5FECB80099C55C /* Yummi */ = {
 			isa = PBXGroup;
 			children = (
-				F7FFDF8E2B91EAB300F152A0 /* Views */,
 				F715AFCD2B5FECB80099C55C /* YummiApp.swift */,
+				F7FFDF8E2B91EAB300F152A0 /* Views */,
 				F715AFD12B5FECBA0099C55C /* Assets.xcassets */,
 				F715AFD32B5FECBA0099C55C /* Preview Content */,
 				F715AFF72B5FEFCE0099C55C /* Ingredients.swift */,
