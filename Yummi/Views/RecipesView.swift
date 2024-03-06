@@ -15,16 +15,23 @@ struct RecipesView: View {
     
     
     var body: some View {
-        List {
-            Text("Pick Your Recipe!")
-                .bold()
-            Picker("Which recipe would you like to view?", selection: $pickedRecipe) {
-                ForEach(recipes, id:\.self) { newRecipe in
-                    Text(newRecipe.name).tag(newRecipe)
+        NavigationStack {
+            List {
+                Text("Pick Your Recipe!")
+                    .bold()
+                Picker("Which recipe would you like to view?", selection: $pickedRecipe) {
+                    ForEach(recipes, id:\.self) { newRecipe in
+                        Text(newRecipe.name).tag(newRecipe)
+                    }
                 }
+                Text("\(pickedRecipe.displayRecipe())")
+                    .padding()
+//                NavigationLink {
+//                    RecipeDetailView(recipeToDisplay: pickedRecipe)
+//                } label: {
+//                    Text("See Recipe Details")
+//                }
             }
-        Text("\(pickedRecipe.displayRecipe())")
-            .padding()
         }
     }
 }
