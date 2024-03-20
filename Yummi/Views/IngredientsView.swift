@@ -53,16 +53,16 @@ struct IngredientsView: View {
             }
             
             
-//            if ingredients.count > 0 {
-//                Text("\(ingredients[selectedIngredient].displayIngredients())")
-//                Button("Switch Ingredient", action: {
-//                    selectedIngredient += 1
-//                })
-//                .padding()
-//            }
-//            else {
-//                Text("No ingredients. Add one")
-//            }
+            if ingredients.count > 0 {
+                Text("\(ingredients[selectedIngredient].displayIngredients())")
+                Button("Switch Ingredient", action: {
+                    selectedIngredient += 1
+                })
+                .padding()
+            }
+            else {
+                Text("No ingredients. Add one")
+            }
             
             
             Section {

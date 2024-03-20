@@ -26,11 +26,11 @@ struct RecipesView: View {
                 }
                 Text("\(pickedRecipe.displayRecipe())")
                     .padding()
-//                NavigationLink {
-//                    RecipeDetailView(recipeToDisplay: pickedRecipe)
-//                } label: {
-//                    Text("See Recipe Details")
-//                }
+                NavigationLink {
+                    RecipeDetailView(pickedRecipe: Recipes)
+                } label: {
+                    Text("See Recipe Details")
+                }
             }
         }
     }
