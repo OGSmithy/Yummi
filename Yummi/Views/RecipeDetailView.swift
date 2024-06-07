@@ -17,7 +17,9 @@ struct RecipeDetailView: View {
     
     var body: some View {
         
-        Text("TODO")
+        Form {
+//            Text("\(pickedRecipe)")
+        }
     }
 }
 
@@ -28,12 +30,8 @@ struct RecipeDetailView: View {
 
 
 
-
-
-
-
 struct RecipeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeDetailView(pickedRecipe: pickedRecipe)
+        RecipeDetailView(pickedRecipe: Recipes.examples[0])
     }
 }
